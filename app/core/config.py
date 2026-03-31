@@ -5,6 +5,7 @@ class Settings(BaseSettings):
     debug: bool = True
     db_type: str = "mongodb"
     database_url: str = "mongodb://localhost:27017/"   
+    redis_url: str = "redis://localhost:6379/0"
     secret_key: str = "DAT_DEP_TRAI_QUA" 
     algorithm: str = "HS256"
     access_token_expire_minutes: int = 30

@@ -5,6 +5,7 @@ from app.models.user import UserCreate
 from app.api.v1.endpoints.user import router as user_router
 from app.api.v1.endpoints.post import router as post_router
 from app.api.v1.endpoints import auth
+from app.api.v1.endpoints.email import router as email_router
 app = FastAPI(title="BLog cua toi")
 
 db_users = []
@@ -12,3 +13,4 @@ db_users = []
 app.include_router(user_router, prefix="/api/v1", tags=["users"])
 app.include_router(post_router, prefix="/api/v1", tags=["posts"])
 app.include_router(auth.router, prefix="/api/v1/auth", tags=["auth"])
+app.include_router(email_router, prefix="/api/v1/email", tags=["email"])
